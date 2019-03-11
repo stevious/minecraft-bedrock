@@ -26,4 +26,4 @@ WORKDIR ${SERVER_PATH}
 EXPOSE 19132/udp 19133/udp
 
 RUN chmod +x start.sh
-CMD ["start.sh"]
+CMD ./start.sh
