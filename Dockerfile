@@ -1,12 +1,11 @@
 FROM phusion/baseimage:0.11
 
 RUN apt-get update \
-  && apt-get install -y unzip \
+  && apt-get install -y sudo unzip \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV LD_LIBRARY_PATH=.
-ENV SERVER_PATH="/opt/bedrock-server"
+ENV SERVER_PATH="/opt/minecraft-bedrock"
 ENV DEFAULTS_PATH="${SERVER_PATH}/defaults"
 ENV DATA_PATH="/config"
 
