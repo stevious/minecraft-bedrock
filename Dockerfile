@@ -9,7 +9,7 @@ ENV SERVER_PATH="/opt/minecraft-bedrock"
 ENV DEFAULTS_PATH="${SERVER_PATH}/defaults"
 ENV DATA_PATH="/config"
 
-RUN curl https://minecraft.azureedge.net/bin-linux/bedrock-server-1.10.0.7.zip --output bedrock-server.zip
+RUN curl https://minecraft.azureedge.net/bin-linux/bedrock-server-1.11.0.23.zip --output bedrock-server.zip
 RUN mkdir -p ${DEFAULTS_PATH} ${DATA_PATH}
 RUN unzip bedrock-server.zip -d ${SERVER_PATH}
 RUN rm bedrock-server.zip $SERVER_PATH/server.properties $SERVER_PATH/whitelist.json $SERVER_PATH/permissions.json
