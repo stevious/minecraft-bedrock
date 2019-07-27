@@ -1,7 +1,8 @@
-FROM phusion/baseimage:0.11
+FROM ubuntu:19.04
 
 RUN apt-get update \
-  && apt-get install -y sudo unzip \
+  && apt-get upgrade \
+  && apt-get install -y apt-utils sudo unzip curl \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
