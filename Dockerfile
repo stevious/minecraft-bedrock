@@ -1,7 +1,7 @@
 FROM ubuntu:19.04
 
 RUN apt-get update \
-  && apt-get upgrade \
+  && apt-get upgrade -y \
   && apt-get install -y apt-utils sudo unzip curl \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
